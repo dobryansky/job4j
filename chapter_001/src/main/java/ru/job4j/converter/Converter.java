@@ -32,6 +32,16 @@ public class Converter {
         boolean passed2 = expected2 == out2;
         System.out.println("1000 rubles are 16 dollars. Test result : " + passed2);
 
+        int in3 = 10;
+        int expected3 = 600;
+        int out3 = DollarToRuble(in3);
+        boolean passed3 = expected3 == out3;
+        System.out.println("10 dollars are 600 rubles. Test result : " + passed3);
 
+        int in4 = 10;
+        int expected4 = 700;
+        int out4 = EuroToRuble(in4);
+        boolean passed4 = expected4 == out4;
+        System.out.println("10 euro are 700 rubles. Test result : " + passed4);
     }
 }
