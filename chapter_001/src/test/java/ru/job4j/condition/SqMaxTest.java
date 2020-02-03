@@ -17,6 +17,21 @@ public class SqMaxTest  {
 
 
         int expected = SqMax.max(first,second,third,forth);
-         assertThat(expected, is(14));
+        assertThat(expected, is(14));
     }
+
+    @Test
+    public void square1() {
+        int first = 5;
+        int second = 4;
+        int third = 2;
+        int forth = 3;
+
+
+        int expected = SqMax.max(first,second,third,forth);
+        assertThat(expected, is(5));
+    }
+
+
 }
+
