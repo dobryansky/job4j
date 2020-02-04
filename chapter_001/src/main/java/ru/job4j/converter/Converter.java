@@ -7,14 +7,16 @@ public class Converter {
     }
 
     public static int rubleToDollar(int value) {
-        return value/60;
+        return value / 60;
     }
 
-    public static int DollarToRuble(int value) {
-        return value*60;
+    public static int dollarToRuble(int value) {
+        return value * 60;
     }
 
-    public static int EuroToRuble(int value)   { return value*70; }
+    public static int euroToRuble(int value) {
+        return value * 70;
+    }
 
     public static void main(String[] args) {
         int euro = rubleToEuro(1000);
@@ -34,13 +36,13 @@ public class Converter {
 
         int in3 = 10;
         int expected3 = 600;
-        int out3 = DollarToRuble(in3);
+        int out3 = dollarToRuble(in3);
         boolean passed3 = expected3 == out3;
         System.out.println("10 dollars are 600 rubles. Test result : " + passed3);
 
         int in4 = 10;
         int expected4 = 700;
-        int out4 = EuroToRuble(in4);
+        int out4 = euroToRuble(in4);
         boolean passed4 = expected4 == out4;
         System.out.println("10 euro are 700 rubles. Test result : " + passed4);
     }

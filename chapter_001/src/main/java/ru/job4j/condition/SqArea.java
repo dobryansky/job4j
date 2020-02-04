@@ -4,7 +4,7 @@ public class SqArea {
     public static double square(int p, int k) {
 
         // формула для расчета площади через k и p; S= k*p^2/(4*(k+1)^2)
-        return (k*Math.pow(p, 2)) * (4*(Math.pow((k+1), 2)));
+        return (k * Math.pow(p, 2)) * (4 * (Math.pow((k + 1), 2)));
     }
 
     public static void main(String[] args) {

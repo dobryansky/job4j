@@ -8,14 +8,14 @@ import static org.junit.Assert.assertThat;
 public class FactorialTest {
 
     @Test
-    public void Factorial5() {
+    public void factorial5() {
         int rsl = Factorial.calc(5);
         int expected = 120;
         assertThat(rsl, is(expected));
     }
 
     @Test
-    public void Factorial0() {
+    public void factorial0() {
         int rsl = Factorial.calc(0);
         int expected = 1;
         assertThat(rsl, is(expected));

@@ -1,6 +1,7 @@
 package ru.job4j.array;
 
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -17,7 +18,6 @@ public class MatrixCheckTest {
         assertThat(result, is(true));
 
 
-
     }
 
     @Test
@@ -31,6 +31,7 @@ public class MatrixCheckTest {
         assertThat(result, is(false));
 
     }
+
     @Test
     public void whenHasMonoVertical() {
         char[][] input = {

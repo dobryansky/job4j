@@ -1,4 +1,5 @@
 package ru.job4j.condition;
+
 /*
 public class SqMax {
     public static int max(int first, int second, int third, int forth) {
@@ -35,14 +36,23 @@ public class SqMax {
  */
 public class SqMax {
     public static int max(int first, int second, int third, int forth) {
-        int result,result1,result2;
-        if (second>first){ result1=second; }
-        else {result1=first;}
+        int result, result1, result2;
+        if (second > first) {
+            result1 = second;
+        } else {
+            result1 = first;
+        }
 
-        if (third>forth){ result2=third; }
-        else {result2=forth;}
-        if (result1 > result2){ result=result1; }
-        else {result=result2;}
+        if (third > forth) {
+            result2 = third;
+        } else {
+            result2 = forth;
+        }
+        if (result1 > result2) {
+            result = result1;
+        } else {
+            result = result2;
+        }
         return result;
     }
 }

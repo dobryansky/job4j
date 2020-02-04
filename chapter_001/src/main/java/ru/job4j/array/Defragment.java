@@ -6,16 +6,14 @@ public class Defragment {
             if (array[index] == null) {
 
                 String temp;
-               for (int j=index+1;j<array.length;j++)
-               {
-                   if (array[j]!=null)
-                   {
-                        temp=array[j];
-                       array[j]=array[index];
-                       array[index]=temp;
-                       break;
-                   }
-               }
+                for (int j = index + 1; j < array.length; j++) {
+                    if (array[j] != null) {
+                        temp = array[j];
+                        array[j] = array[index];
+                        array[index] = temp;
+                        break;
+                    }
+                }
             }
             System.out.print(array[index] + " ");
         }

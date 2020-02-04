@@ -1,16 +1,16 @@
 package ru.job4j.array;
 
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class FindLoopTest {
 
 
-
     @Test
     public void whenFind3() {
-        int[] input = new int[] {5, 2, 10, 2, 4};
+        int[] input = new int[]{5, 2, 10, 2, 4};
         int value = 2;
         int start = 2;
         int finish = 4;
@@ -21,7 +21,7 @@ public class FindLoopTest {
 
     @Test
     public void whenFind5() {
-        int[] input = new int[] {1, 2, 10, 2, 4,6,3,9,6,4};
+        int[] input = new int[]{1, 2, 10, 2, 4, 6, 3, 9, 6, 4};
         int value = 5;
         int start = 3;
         int finish = 7;
