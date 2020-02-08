@@ -1,2 +1,2 @@
 # job4j
-Хочу блины и кока-колу
+Veni vedi vici
