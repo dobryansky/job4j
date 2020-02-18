@@ -1,6 +1,8 @@
 package ru.job4j.oop;
 
 public class Student {
+    int x=10;
+    int y=20;
 
     public void music() {
         System.out.println("Tra tra tra");
@@ -18,5 +20,7 @@ public class Student {
         petya.song();
         petya.song();
         petya.song();
+        System.out.println(petya.x);
+        System.out.println(petya.y);
     }
 }
