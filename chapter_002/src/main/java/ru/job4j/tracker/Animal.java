@@ -1,14 +1,20 @@
 package ru.job4j.tracker;
 
 public class Animal {
+    String name;
     public Animal() {
-        super();
-        System.out.println("Animal");
+
+    }
+
+    public Animal(String name) {
+        this.name=name;
+        name="Animal";
+        System.out.println(name);
     }
 
     public static void main(String[] args) {
 
-        Tiger tiger = new Tiger();
+        Tiger tiger = new Tiger("Tiger");
 
     }
 }
