@@ -1,16 +1,9 @@
 package ru.job4j.tracker;
 
 public class Tiger extends Predator {
-    public Tiger() {
-
-
-    }
-
-    public Tiger(String name) {
+    Tiger(String name){
         super(name);
-        name="Tiger";
-        System.out.println(name);
+        System.out.println( "Tiger");
     }
-
-
 }
+
