@@ -4,19 +4,24 @@ public class Jar {
     private int value;
 
     public Jar(int size) {
-        value = size;
+
+        this.value = size;
     }
+
+
     public void pour(Jar another) {
-        value = value + another.value;
+        this.value = this.value + another.value;
         another.value = 0;
     }
 
     public static void main(String[] args) {
-        Jar first = new Jar(10);
+        Jar first = new Jar(100);
         Jar second = new Jar(5);
         System.out.println("first : " + first.value + ". second : " + second.value);
         first.pour(second);
         System.out.println("first : " + first.value + ". second : " + second.value);
+
+
 
     }
 
