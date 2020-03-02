@@ -24,7 +24,8 @@ public class Tracker {
      */
     public Item add(Item item) {
         item.setId(this.generateId());
-        this.items[this.position++] = item;
+        this.items[position] = item;
+        this.position++;
         return item;
     }
 
@@ -35,7 +36,7 @@ public class Tracker {
      */
     private String generateId() {
         //Реализовать метод генерации.
-                    Random rm = new Random();
+            Random rm = new Random();
             return String.valueOf(rm.nextLong() + System.currentTimeMillis());
         }
 
@@ -57,15 +58,16 @@ public class Tracker {
         return Arrays.copyOf(itemsCopy, counter);
     }
 
-     int findById(String id) {
-        int result = -1;
-        for (int i = 0; i < position; i++) {
-            if (this.items[i].getId().equals(id)) {
-                result = i;
+    public Item findById(String id) {
+        Item item = null;
+        for (int index = 0; index < position; index++) {
+            Item current = items[index];
+            if (current.getId().equals(id)) {
+                item = current;
                 break;
             }
         }
-        return result;
+        return item;
     }
 
     }
