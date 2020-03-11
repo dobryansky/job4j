@@ -17,9 +17,13 @@ public class Jar {
     public static void main(String[] args) {
         Jar first = new Jar(100);
         Jar second = new Jar(5);
-        System.out.println("first : " + first.value + ". second : " + second.value);
-        first.pour(second);
-        System.out.println("first : " + first.value + ". second : " + second.value);
+
+
+        System.out.println("first : " + first.value + ". second : " + second.value );
+        //first.pour(second);
+        second.pour(first);
+        System.out.println("first : " + first.value + ". second : " + second.value );
+
 
 
 

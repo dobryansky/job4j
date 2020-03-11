@@ -20,13 +20,13 @@ public class Tracker {
 
     /**
      * Метод реализующий добавление заявки в хранилище
-     * @param item новая заявка
+     * @param newitem новая заявка
      */
-    public Item add(Item item) {
-        item.setId(this.generateId());
-        this.items[position] = item;
+    public Item add(Item newitem) {
+        newitem.setId(this.generateId());
+        this.items[position] = newitem;
         this.position++;
-        return item;
+        return newitem;
     }
 
     /**
@@ -57,6 +57,7 @@ public class Tracker {
 
         return Arrays.copyOf(itemsCopy, counter);
     }
+
 
     public Item findById(String id) {
         Item item = null;
