@@ -11,7 +11,7 @@ public class Tracker {
     /**
      * Массив для хранение заявок.
      */
-    private final Item[] items = new Item[100];
+    private static final Item[] items = new Item[100];
 
     /**
      * Указатель ячейки для новой заявки.
@@ -56,6 +56,8 @@ public class Tracker {
         }
 
         return Arrays.copyOf(itemsCopy, counter);
+
+
     }
 
     public Item findById(String id) {
@@ -68,6 +70,47 @@ public class Tracker {
             }
         }
         return item;
+    }
+
+    public static void main(String[] args) {
+
+
+        Tracker tracker = new Tracker();
+        Item item1 = new Item("test1");
+        Item item2 = new Item("test2");
+        Item item3 = new Item("test3");
+        Item item4 = new Item("test4");
+        Item item5 = new Item("test5");
+        tracker.add(item1);
+        tracker.add(item2);
+        tracker.add(item3);
+        tracker.add(item4);
+        tracker.add(item5);
+       /* tracker.findAll();
+        tracker.add(item2);
+        tracker.add(item3);
+        //Item result = tracker.findById(item1.getId());
+        tracker.findByName("test1");
+        tracker.findById(item2.getId());
+        System.out.println("name="+item1.getName());
+        System.out.println("id="+item1.getId());
+        System.out.println("position = "+tracker.position);
+        System.out.println("");
+        System.out.println("name="+item2.getName());
+        System.out.println("id="+item2.getId());
+        System.out.println("position = "+tracker.position);
+        System.out.println("");
+        System.out.println("name="+item3.getName());
+        System.out.println("id="+item3.getId());
+        System.out.println("position = "+tracker.position);*/
+        tracker.findByName("test1");
+       for (int i=0;i<5;i++){
+           System.out.println(items[i].getName());
+           System.out.println(items[i].getId());
+           System.out.println("");
+       }
+
+
     }
 
     }
