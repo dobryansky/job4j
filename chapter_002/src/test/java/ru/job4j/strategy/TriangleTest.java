@@ -18,7 +18,7 @@ public class TriangleTest {
                         .add("+++")
                         .add("++++")
                         .add("+++++")
-                                .toString()
+                        .toString()
                 )
         );
     }

@@ -10,7 +10,6 @@ public class Square implements Shape {
         pic.add("+  +");
         pic.add("+  +");
         pic.add("++++");
-
-        return pic.toString();
+         return pic.toString();
     }
 }
