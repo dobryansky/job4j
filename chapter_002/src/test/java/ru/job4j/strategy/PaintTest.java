@@ -38,7 +38,7 @@ public class PaintTest {
                                 .add("++++")
                                 .add("+  +")
                                 .add("+  +")
-                                .add("++++\r\n")
+                                .add("++++")
 
                                 .toString()
                 )
@@ -56,7 +56,7 @@ public class PaintTest {
                                 .add("++")
                                 .add("+++")
                                 .add("++++")
-                                .add("+++++\r\n")
+                                .add("+++++")
                                 .toString()
                 )
         );
