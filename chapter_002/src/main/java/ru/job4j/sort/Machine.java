@@ -5,7 +5,11 @@ import java.util.Arrays;
 public class Machine {
     private final int[] COINS = {10, 5, 2, 1};
 
-    public int[] change(int money, int price) {
+    public int[] change(int money, int price) throws NoMoneyexeption {
+
+        if (money<price){
+            throw new NoMoneyexeption("У тебя мало денег для этой покупки");
+        }
         int[] rsl = new int[100];
         int size = 0;
         int needreturn = money - price;
@@ -25,13 +29,11 @@ public class Machine {
         return Arrays.copyOf(rsl, size);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoMoneyexeption {
         Machine machine = new Machine();
-        int[] coins = machine.change(100, 35);
+        int[] coins = machine.change(60, 100);
         for (int tp : coins) {
             System.out.println(tp);
         }
-
     }
-
 }
