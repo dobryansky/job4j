@@ -11,7 +11,6 @@ public class ConvertMatrix2List {
             for (int data : innerArray) {
                 list.add(data);
             }
-
         }
         return list;
     }
