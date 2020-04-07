@@ -27,7 +27,7 @@ public class UniqueText {
 
     public static void main(String[] args) {
         String Str = "Разделяем эту строку на слова";
-        String Duplicate = "Разделяем на слова эту строку";
+        String Duplicate = "Разделяем на слова эту строку снова";
 
         for (String retval : Str.split(" ")) {
             System.out.println(retval);
