@@ -20,5 +20,15 @@ public class PassportOffice {
         return passport;
     }
 
+    public static void main(String[] args) {
+        Citizen citizen1= new Citizen("4010","qwwq5467w");
+        Citizen citizen2= new Citizen("4010","qww12qw");
+        Citizen citizen3= new Citizen("4040","qw2342qw");
+        PassportOffice passportOffice=new PassportOffice();
+        System.out.println(passportOffice.add(citizen1));
+        System.out.println(passportOffice.add(citizen2));
+        System.out.println(passportOffice.add(citizen3));
+        System.out.println();
+    }
 
 }
