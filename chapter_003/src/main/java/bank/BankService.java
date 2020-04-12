@@ -5,32 +5,23 @@ import java.util.*;
 public class BankService {
     private Map<User, List<Account>> users = new HashMap<>();
 
-    public boolean addUser(User user) {
-        boolean rsl=false;
-        if(!users.containsKey(user)) {
-            users.put(user, new ArrayList<Account>());
-            rsl=true;
-        }
-        return  rsl;
-
+    public void addUser(User user) {
+        users.putIfAbsent(user, new ArrayList<Account>());
     }
 
     public void addAccount(String passport, Account account) {
-       if (findByPassport(passport)!=null){
-           users.get(findByPassport(passport)).add(account);
-       }
+        if (findByPassport(passport) != null) {
+            users.get(findByPassport(passport)).add(account);
+        }
 
     }
 
     public User findByPassport(String passport) {
-        for(User user: users.keySet()){
-           if(user.getPassport().equals(passport)){
-
-               return user;
-           }
-
+        for (User user : users.keySet()) {
+            if (user.getPassport().equals(passport)) {
+                return user;
+            }
         }
-
         return null;
     }
 
@@ -41,6 +32,7 @@ public class BankService {
             for (Account schet : users.get(user)) {
                 if (schet.getRequisite().equals(requisite)) {
                     account = schet;
+                    break;
                 }
             }
         }
@@ -52,14 +44,13 @@ public class BankService {
         boolean rsl = false;
         Account srcAccount = findByRequisite(srcPassport, srcRequisite);
         Account destAccount = findByRequisite(destPassport, destRequisite);
-        if ((srcAccount.getBalance() >= amount) && (srcAccount != null) && destAccount != null  ) {
+        if ((srcAccount.getBalance() >= amount) && (srcAccount != null) && destAccount != null) {
             destAccount.setBalance(destAccount.getBalance() + amount);
             srcAccount.setBalance(srcAccount.getBalance() - amount);
             rsl = true;
         }
         return rsl;
     }
-
 
 
 }
