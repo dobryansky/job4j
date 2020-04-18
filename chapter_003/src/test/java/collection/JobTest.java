@@ -29,7 +29,7 @@ public class JobTest {
                 new Job("B", 5),
                 new Job("A", 1)
         );
-        assertThat(rsl,greaterThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 
     @Test
@@ -39,7 +39,7 @@ public class JobTest {
                 new Job("B", 5),
                 new Job("A", 1)
         );
-        assertThat(rsl,greaterThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 
     @Test
@@ -49,7 +49,7 @@ public class JobTest {
                 new Job("B", 5),
                 new Job("A", 1)
         );
-        assertThat(rsl,lessThan(0));
+        assertThat(rsl, lessThan(0));
     }
 
     @Test
@@ -61,6 +61,7 @@ public class JobTest {
         );
         assertThat(rsl, lessThan(0));
     }
+
     @Test
     public void whenAscByNameAndPriority() {
         Comparator<Job> cmpNamePriority = new JobASCByName().thenComparing(new JobASCByPriority());
@@ -70,7 +71,6 @@ public class JobTest {
         );
         assertThat(rsl, greaterThan(0));
     }
-
 
 
 }
