@@ -69,6 +69,7 @@ public class JobTest {
                 new Job("B", 5),
                 new Job("A", 1)
         );
+        System.out.println(rsl);
         assertThat(rsl, greaterThan(0));
     }
 
