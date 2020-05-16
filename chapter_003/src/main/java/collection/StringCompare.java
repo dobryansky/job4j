@@ -10,25 +10,19 @@ public class StringCompare implements Comparator<String> {
         int lmin = Math.min(l1, l2);
 
         for (int i = 0; i < lmin; i++) {
-            int str1_ch = left.charAt(i);
-            int str2_ch = right.charAt(i);
-            if (str1_ch != str2_ch) {
-                return str1_ch - str2_ch;
+            int str1ch = left.charAt(i);
+            int str2ch = right.charAt(i);
+            if (str1ch != str2ch) {
+                return str1ch - str2ch;
             }
         }
-        if (l1 != l2) {
-            return l1 - l2;
-        }
-        else {
-            return 0;
-        }
+        return l1 != l2 ? l1 - l2 : 0;
 
     }
 
     public static void main(String[] args) {
-        StringCompare stringCompare= new StringCompare();
-        int result = stringCompare.compare("ABCD","ABCDEF");
-        //result= Character.compare('A','G');
+        StringCompare stringCompare = new StringCompare();
+        int result = stringCompare.compare("ABCDEA", "ABCDEF");
         System.out.println(result);
 
 
