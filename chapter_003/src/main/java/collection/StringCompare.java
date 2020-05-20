@@ -5,18 +5,18 @@ import java.util.Comparator;
 public class StringCompare implements Comparator<String> {
     @Override
     public int compare(String left, String right) {
-        int l1 = left.length();
-        int l2 = right.length();
-        int lmin = Math.min(l1, l2);
+        int leftlength = left.length();
+        int rightlength = right.length();
+        int lmin = Math.min(leftlength, rightlength);
 
         for (int i = 0; i < lmin; i++) {
-            int str1ch = left.charAt(i);
-            int str2ch = right.charAt(i);
-            if (str1ch != str2ch) {
-                return str1ch - str2ch;
+            int strleft = left.charAt(i);
+            int strright = right.charAt(i);
+            if (strleft != strright) {
+                return strleft - strright;
             }
         }
-        return l1 != l2 ? l1 - l2 : 0;
+        return leftlength != rightlength ? leftlength - rightlength : 0;
 
     }
 
